@@ -17,14 +17,17 @@ apply plugin: 'org.springframework.boot'
 group = 'com.aya.springboot.test'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
 }
 
+ext['hibernate.version'] = '5.1.0.Final'
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compileOnly('org.projectlombok:lombok:+')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('org.postgresql:postgresql:+')
 }
